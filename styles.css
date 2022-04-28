@@ -101,8 +101,7 @@ header {
 }
 
 nav::before {
-    content: '';
-    /* otherwise the content won't be visible */
+    /* content: '';  without "" content won't be visible */
     position: fixed;
     top: 0;
     left: 0;
@@ -175,4 +174,84 @@ nav::before {
 .first-letter {
     text-transform: uppercase;
     font-size: 10.5rem;
+}
+
+.headline {
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-right: -.7rem;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    max-width: 9.4rem;
+    height: .20rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.line-left::before,
+.line-right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+}
+
+.line-right::before {
+    border-right-color: #fff;
+    right: 0;
+}
+
+.line-left::before {
+    border-left-color: #fff;
+    left: 0;
+}
+
+.asterisk {
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.5rem;
+}
+
+.headline-description h5 {
+    Color: #fff;
+    font-size: 1.6rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.cta-btn {
+    background-color: #fff;
+    font-size: 1.1rem;
+    color: var(--body-font-color);
+    padding: .9rem 1.8rem;
+    border-radius: .5rem;
+    transition: background-color .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    color: #fff;
+    background-color: var(--secondary-font-color);
 }
